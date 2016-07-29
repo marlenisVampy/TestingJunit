@@ -1,4 +1,3 @@
-//VampySoft.java										//MJCC  100301097
 import java.io.*;
 import java.sql.*;
 import java.util.*; 
