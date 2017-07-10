@@ -76,9 +76,7 @@ public class ShoppingCartTest extends TestCase{
     @Test
     public void testRemoveItem() {
         System.out.println("removeItem");
-        Product item = null;
-        ShoppingCart instance = new ShoppingCart();
-        instance.removeItem(item);
+        new_shop.removeItem(new_Prodt);
       
     }
 
@@ -88,9 +86,8 @@ public class ShoppingCartTest extends TestCase{
     @Test
     public void testGetItemCount() {
         System.out.println("getItemCount");
-        ShoppingCart instance = new ShoppingCart();
-        int expResult = 0;
-        int result = instance.getItemCount();
+       int expResult = 1;
+        int result = new_shop.getItemCount();
         assertEquals(expResult, result);
         
     }
@@ -101,8 +98,7 @@ public class ShoppingCartTest extends TestCase{
     @Test
     public void testEmpty() {
         System.out.println("empty");
-        ShoppingCart instance = new ShoppingCart();
-        instance.empty();
+        new_shop.empty();
         
     }
     
