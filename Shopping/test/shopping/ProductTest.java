@@ -21,7 +21,8 @@ public class ProductTest extends TestCase{
 
     private Product new_Prodt;
     
-    public ProductTest() {
+    public ProductTest(String testName) {
+        super(testName);
     }
     
     @BeforeClass
@@ -45,7 +46,8 @@ public class ProductTest extends TestCase{
     
     @After
     public void tearDown() throws Exception {
-        super.tearDown();
+        //super.tearDown();
+        new_Prodt = null;
     }
 
     /**
