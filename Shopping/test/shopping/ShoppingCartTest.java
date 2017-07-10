@@ -5,6 +5,7 @@
  */
 package shopping;
 
+import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -16,7 +17,10 @@ import static org.junit.Assert.*;
  *
  * @author PC
  */
-public class ShoppingCartTest {
+public class ShoppingCartTest extends TestCase{
+      
+    private ShoppingCart new_shop;
+    private Product new_Prodt;
     
     public ShoppingCartTest() {
     }
@@ -30,11 +34,19 @@ public class ShoppingCartTest {
     }
     
     @Before
-    public void setUp() {
+    public void setUp() throws Exception {
+        new_shop = new ShoppingCart();
+        new_Prodt = new Product("P001", "Plasma TV LG 32",
+"Plasma TV with TDT Decod. and high resolution Screen",1000.99);
+        
+        new_shop.addItem(new_Prodt);
+      
     }
     
     @After
-    public void tearDown() {
+    public void tearDown()throws Exception {
+        new_shop = null;
+        new_Prodt = null;
     }
 
     /**
@@ -43,9 +55,8 @@ public class ShoppingCartTest {
     @Test
     public void testGetBalance() {
         System.out.println("getBalance");
-        ShoppingCart instance = new ShoppingCart();
-        double expResult = 0.0;
-        double result = instance.getBalance();
+        double expResult = 1000.99;
+        double result = new_shop.getBalance();
         assertEquals(expResult, result, 0.0);
       }
 
@@ -55,9 +66,7 @@ public class ShoppingCartTest {
     @Test
     public void testAddItem() {
         System.out.println("addItem");
-        Product item = null;
-        ShoppingCart instance = new ShoppingCart();
-        instance.addItem(item);
+        new_shop.addItem(new_Prodt);
         
     }
 
