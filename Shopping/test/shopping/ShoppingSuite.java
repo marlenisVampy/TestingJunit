@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author PC
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses( {
+@Suite.SuiteClasses({
             shopping.ShoppingCartTest.class,
             shopping.ShoppingTest.class,
             shopping.ProductTest.class
