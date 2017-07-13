@@ -17,7 +17,13 @@ import org.junit.runners.Suite;
  * @author PC
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({shopping.ShoppingCartTest.class, shopping.ShoppingTest.class, shopping.ProductTest.class})
+@Suite.SuiteClasses(
+        {
+            shopping.ShoppingCartTest.class,
+            shopping.ShoppingTest.class,
+            shopping.ProductTest.class
+        }
+)
 public class ShoppingSuite {
 
     @BeforeClass
